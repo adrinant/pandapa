@@ -32,7 +32,8 @@
   import { ref } from 'vue';
   import { ChevronDown, ChevronRight } from 'lucide-vue-next';
   
-  const props = defineProps<{
+  // Destructure props directly
+  const { rank, teamName, institution, currentScore, teamMembers } = defineProps<{
     rank: number;
     teamName: string;
     institution: string;
@@ -46,3 +47,7 @@
     expanded.value = !expanded.value;
   }
   </script>
+  
+  <style scoped>
+  /* Add custom styles here if needed */
+  </style>
